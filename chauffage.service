@@ -1,0 +1,10 @@
+[Unit]
+Description=Chauffage
+
+[Service]
+ExecStart=/home/arnaud/dev/github/chauffage/start.py
+SyslogIdentifier=chauffage
+Restart=always
+
+[Install]
+WantedBy=default.target
