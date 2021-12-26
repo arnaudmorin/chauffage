@@ -43,9 +43,7 @@ def save_states(f, states):
 
 def is_confort(date):
     """Check if we are in confort period"""
-    if date.hour >= 6 and date.hour < 8:
-        return True
-    if date.hour >= 19 and date.hour < 21:
+    if date.hour >= 6 and date.hour < 8 and date.weekday() < 5:
         return True
     return False
 
